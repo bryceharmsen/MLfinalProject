@@ -94,19 +94,19 @@ class SampleGenerator:
             samples.append(noisySample)
         return samples
 
-    def getArffs(self, saveDir='.', outFilePrefix='', templateFileName='starter'):
+    def getArffs(self, saveDir='.', subDir='', templateFileName='starter'):
         trainingSamples, testingSamples = self.getSamples(self.prototypes, self.numSamples, self.maxNoise)
-        trainFileName = f'{outFilePrefix}train'
-        testFileName = f'{outFilePrefix}test'
-        self.generateArff(trainingSamples, saveDir, trainFileName, templateFileName)
-        self.generateArff(testingSamples, saveDir, testFileName, templateFileName)
-        print(f'{trainFileName} and {testFileName} have been saved at {saveDir}')
-
-
-    def generateArff(self, samplesDict: SamplesDict, saveDir='.', outFileName='data', templateFileName='starter'):
+        templateFilePath = f'{saveDir}/{templateFileName}.arff'
         saveDir = saveDir[:-1] if saveDir.endswith('/') else saveDir
+        saveDir = f'{saveDir}/{subDir}' if subDir != '' else saveDir
+        self.generateArff(trainingSamples, saveDir, 'train', templateFilePath)
+        self.generateArff(testingSamples, saveDir, 'test', templateFilePath)
+        print(f'train and test files have been saved at {saveDir}')
+
+
+    def generateArff(self, samplesDict: SamplesDict, saveDir='.', outFileName='data', templateFilePath='starter'):
         savePath = f'{saveDir}/{outFileName}.arff'
-        shutil.copy2(f'{saveDir}/{STARTER_ARFF_FILE_NAME}', savePath)
+        shutil.copy2(templateFilePath, savePath)
         with open(savePath, 'a') as arff:
             for char, samples in samplesDict.items():
                 for sample in samples:
