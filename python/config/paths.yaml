@@ -1,0 +1,4 @@
+prototypesFilePath: '../data/prototypes.yaml'
+paramsDirPath: '../params'
+arffDirPath: '../../arffs'
+starterArffFileName: 'starter'

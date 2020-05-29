@@ -1,0 +1,320 @@
+600 training instances loaded.
+400 testing instances loaded.
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -9.503077847960501
+    Node 10    -7.722902980279534
+    Node 11    4.286299107384885
+    Node 12    -10.3617244417331
+    Node 13    11.022654684417594
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -8.975122870855959
+    Node 10    -8.11538792706852
+    Node 11    -12.302630944632421
+    Node 12    2.4773202783587376
+    Node 13    11.807550767611259
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -9.19708571290544
+    Node 10    7.108901542044631
+    Node 11    3.791866782204249
+    Node 12    -2.810796215032565
+    Node 13    -2.805692166253381
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -7.401322590929453
+    Node 10    10.893878372292349
+    Node 11    -9.478926063595361
+    Node 12    1.0827334218650064
+    Node 13    -15.119693855738994
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -27.43250892374159
+    Node 10    7.427800366518192
+    Node 11    13.880723348589312
+    Node 12    8.708386680865305
+    Node 13    7.950379872695501
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -24.391838267267286
+    Node 10    7.687239991782883
+    Node 11    -10.312432645207105
+    Node 12    9.022757329301744
+    Node 13    10.099440008112747
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -1.480857141733937
+    Node 10    -5.569785514029852
+    Node 11    6.175815989668952
+    Node 12    -30.449854020493998
+    Node 13    -16.187037455676425
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -4.207054595507814
+    Node 10    4.687895302576295
+    Node 11    -7.132927837534781
+    Node 12    -14.703967051385057
+    Node 13    4.425641172907415
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -21.814259671433057
+    Node 10    -6.471841800785515
+    Node 11    13.390994974052026
+    Node 12    11.272341579820637
+    Node 13    -9.630421752844711
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    2.713473963900955
+    Node 10    -19.771711199615023
+    Node 11    -6.159918490783789
+    Node 12    0.3521250100479056
+    Node 13    -10.473332868440922
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    -15.216693776610832
+    Attrib pos0    0.40621932269864697
+    Attrib pos1    2.951776372554832
+    Attrib pos2    -0.8574288105159882
+    Attrib pos3    -5.271170984643562
+    Attrib pos4    7.33951499331354
+    Attrib pos5    -0.15632023284084925
+    Attrib pos6    0.36366072448249825
+    Attrib pos7    8.224377032876035
+    Attrib pos8    -0.13277891209830045
+    Attrib pos9    -0.7703595045578592
+    Attrib pos10    -6.352523472555904
+    Attrib pos11    -10.248909120967125
+    Attrib pos12    -5.455660561310032
+    Attrib pos13    0.4445809783195095
+    Attrib pos14    5.077622872792809
+    Attrib pos15    4.905011851407784
+    Attrib pos16    0.165349432030543
+    Attrib pos17    -6.218524365917996
+    Attrib pos18    -1.1173937524246278
+    Attrib pos19    -0.33400626522237137
+    Attrib pos20    7.9833559942919985
+    Attrib pos21    8.315831981092902
+    Attrib pos22    -2.016498539066175
+    Attrib pos23    -4.926600052494194
+    Attrib pos24    -10.008222743595834
+    Attrib pos25    -0.09733459407170114
+    Attrib pos26    1.3361408338056562
+    Attrib pos27    20.128038196311724
+    Attrib pos28    7.561658784271698
+    Attrib pos29    0.7697629255641
+    Attrib pos30    -3.779606409901929
+    Attrib pos31    -6.395453827299581
+    Attrib pos32    -5.445434333652681
+    Attrib pos33    -9.400133043804766
+    Attrib pos34    -1.1885200564372553
+    Attrib pos35    1.6660494283257579
+    Attrib pos36    -2.5014864028880104
+    Attrib pos37    4.802309706490225
+    Attrib pos38    -11.91803971299226
+    Attrib pos39    -0.6967953855096509
+    Attrib pos40    0.1101171224999775
+    Attrib pos41    -5.830998685134616
+    Attrib pos42    0.5133572966795785
+    Attrib pos43    -3.1798148822256014
+    Attrib pos44    -7.012116593044165
+    Attrib pos45    -3.0654809936238165
+    Attrib pos46    3.154067354609388
+    Attrib pos47    -1.3868339003989893
+    Attrib pos48    0.6231952720303042
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    4.466702736250075
+    Attrib pos0    -3.0704265235894477
+    Attrib pos1    -1.1041857815707043
+    Attrib pos2    0.3994650286013178
+    Attrib pos3    3.1849619722469154
+    Attrib pos4    3.177121269511142
+    Attrib pos5    1.8263500566269406
+    Attrib pos6    -2.6464434085942337
+    Attrib pos7    0.31723925755747795
+    Attrib pos8    1.8825301493479125
+    Attrib pos9    5.856759090933304
+    Attrib pos10    5.7434578644630525
+    Attrib pos11    -2.472547314159692
+    Attrib pos12    1.5667498058635378
+    Attrib pos13    -1.981617378364397
+    Attrib pos14    -0.8672296532646993
+    Attrib pos15    2.7704209883101627
+    Attrib pos16    3.4602051811330803
+    Attrib pos17    1.0416575469946132
+    Attrib pos18    0.9619107746724832
+    Attrib pos19    -2.563707041270364
+    Attrib pos20    -2.4177615892752193
+    Attrib pos21    -1.5281985734437356
+    Attrib pos22    0.39866755910519125
+    Attrib pos23    0.3604508111693054
+    Attrib pos24    -2.634420232594635
+    Attrib pos25    1.9330988281318175
+    Attrib pos26    5.2977332985129655
+    Attrib pos27    -4.487044193695049
+    Attrib pos28    -3.2300229118352792
+    Attrib pos29    4.0794604322211
+    Attrib pos30    -3.9714868003652293
+    Attrib pos31    -4.870909757362391
+    Attrib pos32    1.3741938564603724
+    Attrib pos33    -0.1591924777358428
+    Attrib pos34    1.0930484507614704
+    Attrib pos35    -8.036729203321155
+    Attrib pos36    0.03333288044948056
+    Attrib pos37    5.190957134412263
+    Attrib pos38    -1.6788331021598946
+    Attrib pos39    -6.202298116495188
+    Attrib pos40    -0.06982127263361125
+    Attrib pos41    1.446564714250642
+    Attrib pos42    2.562371833397082
+    Attrib pos43    0.5081698934713156
+    Attrib pos44    3.4514526505501033
+    Attrib pos45    5.199336592293737
+    Attrib pos46    8.406543640322084
+    Attrib pos47    7.381780107501695
+    Attrib pos48    14.543454038178307
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    2.3251502490713976
+    Attrib pos0    2.7308924003024426
+    Attrib pos1    4.95738982928249
+    Attrib pos2    4.494912178847902
+    Attrib pos3    4.2502415742839785
+    Attrib pos4    1.7214346618918794
+    Attrib pos5    0.42926164848822984
+    Attrib pos6    -0.7360005994786402
+    Attrib pos7    2.1779081383876173
+    Attrib pos8    3.5896697797203054
+    Attrib pos9    -1.9474280718871584
+    Attrib pos10    -1.6490715534790028
+    Attrib pos11    1.6585735364857308
+    Attrib pos12    1.6027633159079706
+    Attrib pos13    -1.9373968340697063
+    Attrib pos14    0.6562733754498238
+    Attrib pos15    -0.4600587080126288
+    Attrib pos16    -0.7776970232158015
+    Attrib pos17    4.255748632276735
+    Attrib pos18    -1.9670640246492317
+    Attrib pos19    -0.8690969995400792
+    Attrib pos20    -2.636098146399903
+    Attrib pos21    2.3098051080256914
+    Attrib pos22    2.0437960145582337
+    Attrib pos23    1.2668362871688936
+    Attrib pos24    -0.7548889226419397
+    Attrib pos25    -1.8765128613601563
+    Attrib pos26    -2.0880950795520974
+    Attrib pos27    2.8656113354175585
+    Attrib pos28    2.1783740296432126
+    Attrib pos29    -1.621737646118576
+    Attrib pos30    2.1935162821464282
+    Attrib pos31    -0.9410232931273522
+    Attrib pos32    1.992728908756
+    Attrib pos33    -2.927516388822691
+    Attrib pos34    -3.0638565943733336
+    Attrib pos35    3.021072968445711
+    Attrib pos36    0.4286817109086206
+    Attrib pos37    1.31424629580494
+    Attrib pos38    3.3618907847779873
+    Attrib pos39    -0.024824844023491464
+    Attrib pos40    0.921406737032608
+    Attrib pos41    -5.126713152452276
+    Attrib pos42    3.5659702207303163
+    Attrib pos43    3.5573716017434767
+    Attrib pos44    3.5782198445326516
+    Attrib pos45    1.65308861949122
+    Attrib pos46    3.8018607342604884
+    Attrib pos47    -0.4407191038155004
+    Attrib pos48    -4.6456596319870345
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    -1.3761397208371373
+    Attrib pos0    -0.7592894293171251
+    Attrib pos1    -3.697821337896976
+    Attrib pos2    1.7592778519442347
+    Attrib pos3    -2.8018861933899477
+    Attrib pos4    0.2619221829536937
+    Attrib pos5    1.7368738705271394
+    Attrib pos6    -2.5909886828890434
+    Attrib pos7    3.0638540222944903
+    Attrib pos8    0.055390769630210966
+    Attrib pos9    0.9641712284973466
+    Attrib pos10    -1.8352080553687378
+    Attrib pos11    -0.9613319746079023
+    Attrib pos12    0.3343645787676046
+    Attrib pos13    0.7076771313933438
+    Attrib pos14    1.7492483719671141
+    Attrib pos15    -0.3541870206877746
+    Attrib pos16    0.13721108335733115
+    Attrib pos17    -1.2361914267648706
+    Attrib pos18    1.7482129831104918
+    Attrib pos19    -0.397488880939025
+    Attrib pos20    -1.4357660813959299
+    Attrib pos21    0.7278111213721996
+    Attrib pos22    9.35464205425127
+    Attrib pos23    10.723159678458003
+    Attrib pos24    7.779579909379718
+    Attrib pos25    10.041196438694612
+    Attrib pos26    5.19342881289608
+    Attrib pos27    -0.6525107648023509
+    Attrib pos28    2.480953604092098
+    Attrib pos29    0.5792640244639153
+    Attrib pos30    -0.2996282587658683
+    Attrib pos31    -1.5456346269354155
+    Attrib pos32    -3.8103966746099074
+    Attrib pos33    -1.540652084261837
+    Attrib pos34    -1.0173277181692597
+    Attrib pos35    3.4802256358917756
+    Attrib pos36    2.6970867096585596
+    Attrib pos37    1.5196735532789052
+    Attrib pos38    -3.051920708723937
+    Attrib pos39    2.798586934324357
+    Attrib pos40    2.4127768433556365
+    Attrib pos41    1.1023591330853966
+    Attrib pos42    -0.17225148720855724
+    Attrib pos43    2.223761026605615
+    Attrib pos44    -1.3372527572177673
+    Attrib pos45    1.0392926423892819
+    Attrib pos46    0.6141851949820958
+    Attrib pos47    -3.7374766284625562
+    Attrib pos48    0.9263999373595017
+Class A
+    Input
+    Node 0
+Class B
+    Input
+    Node 1
+Class C
+    Input
+    Node 2
+Class D
+    Input
+    Node 3
+Class E
+    Input
+    Node 4
+Class F
+    Input
+    Node 5
+Class G
+    Input
+    Node 6
+Class H
+    Input
+    Node 7
+Class I
+    Input
+    Node 8
+Class J
+    Input
+    Node 9
+Results
+
+Correctly Classified Instances         293               73.25   %
+Incorrectly Classified Instances       107               26.75   %
+Kappa statistic                          0.7028
+Mean absolute error                      0.0557
+Root mean squared error                  0.2079
+Relative absolute error                 30.9288 %
+Root relative squared error             69.2838 %
+Total Number of Instances              400     
