@@ -113,10 +113,8 @@ public class App {
         //from MLfinalProject dir, run with
         //'java -Dfile.encoding=UTF-8 @/tmp/cp_vngd4z7nsodb9j8f4wl3xwie.argfile ml.App ./arffs/ ./results/'
         if (args.length != 2) {
-            System.out.println("Proper use:\n\tjava -Dfile.encoding=UTF-8 "
-                             + "@/tmp/SOME_TMP_NAME_FROM_VSCODE_RUN ml.App "
-                             + "<PATH_TO_ARFFS_DIR> <PATH_TO_RESULTS_DIR>");
-            System.exit(1);
+            args = new String[] {"./arffs/", "./results"};
+            System.out.println("WARNING: Defaulting to " + args[0] + " and " + args[1] + " for CLI args.");
         }
         App app = new App(args[0], args[1]);
         app.run();
