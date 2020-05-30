@@ -1,22 +1,22 @@
 package ml;
 
-import weka.classifiers.Classifier;
+import weka.classifiers.AbstractClassifier;
 
 public class NamedClassifier {
     
     private final String name;
-    private final Classifier classifier;
+    private final AbstractClassifier classifier;
 
-    public NamedClassifier(Classifier classifier, String name) {
+    public NamedClassifier(AbstractClassifier classifier, String name) {
         this.classifier = classifier;
         this.name = name;
     }
 
-    public Classifier getClassifier() {
-        return classifier;
+    public AbstractClassifier getClassifier() {
+        return this.classifier;
     }
 
-    public String toString() {
-        return name;
+    public String getName() {
+        return this.name;
     }
 }

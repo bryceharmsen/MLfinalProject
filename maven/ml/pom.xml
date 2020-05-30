@@ -31,7 +31,14 @@
       <version>3.8.4</version>
       <scope>system</scope>
       <systemPath>${project.basedir}/lib/weka.jar</systemPath>
-</dependency>
+    </dependency>
+    <dependency>
+      <groupId>weka</groupId>
+      <artifactId>RBFNetwork</artifactId>
+      <version>1.0.8</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/RBFNetwork.jar</systemPath>
+    </dependency>
   </dependencies>
 
   <build>

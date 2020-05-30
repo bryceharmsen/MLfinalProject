@@ -2,7 +2,13 @@ package ml;
 
 public class OptionBuilder {
     
-    public Options[] getOptions() {
-        
+    private Options defaultOptions;
+
+    public OptionBuilder(String[] defaultOptions) {
+        this.defaultOptions = new Options(defaultOptions);
+    }
+
+    public Options getOptions() {
+        return this.defaultOptions;
     }
 }
