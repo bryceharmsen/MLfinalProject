@@ -8,12 +8,16 @@ public class ClassifierRunner {
     private final AbstractClassifier classifier;
     private final InstancesPair instancesPair;
     private final Options[] optionsList;
+    private Options bestOptions;
+    private boolean hasBeenTuned;
     private final String classifierName;
 
     public ClassifierRunner(AbstractClassifier classifier, InstancesPair instancesPair, Options[] optionsList, String classifierName) {
         this.classifier = classifier;
         this.instancesPair = instancesPair;
         this.optionsList = optionsList;
+        this.bestOptions = optionsList[0];
+        this.hasBeenTuned = false;
         this.classifierName = classifierName;
     }
 
@@ -21,31 +25,17 @@ public class ClassifierRunner {
         this.classifier = copy.classifier;
         this.instancesPair = copy.instancesPair;
         this.optionsList = copy.optionsList;
+        this.bestOptions = copy.bestOptions;
+        this.hasBeenTuned = copy.hasBeenTuned;
         this.classifierName = copy.classifierName;
     }
 
-    public static Options tune(AbstractClassifier classifier, InstancesPair instancesPair, Options[] optionsList) throws Exception {
-        Options bestOptions = null;
-        double mostPctCorrect = 0.0;
-
-        for (Options options : optionsList) {
-            Evaluation eval = ClassifierRunner.evaluate(classifier, instancesPair, options);
-            double pctCorrect = eval.pctCorrect();
-            if (pctCorrect > mostPctCorrect) {
-                mostPctCorrect = pctCorrect;
-                bestOptions = options;
-            }
-        }
-        
-        return bestOptions;
+    public Evaluation evaluate(Options options) throws Exception {
+        return this.evaluate(this.classifier, this.instancesPair, options);
     }
 
-    public Options tune() throws Exception {
-        return ClassifierRunner.tune(this.classifier, this.instancesPair, this.optionsList);
-    }
-
-    public static Evaluation evaluate(AbstractClassifier classifier, InstancesPair instancesPair, Options options) throws Exception {
-        classifier = ClassifierRunner.buildClassifier(classifier, instancesPair, options);
+    private Evaluation evaluate(AbstractClassifier classifier, InstancesPair instancesPair, Options options) throws Exception {
+        classifier = this.buildClassifier(classifier, instancesPair, options);
 
         Evaluation eval = new Evaluation(instancesPair.getTrainingInstances());
         eval.evaluateModel(classifier, instancesPair.getTestingInstances());
@@ -53,27 +43,50 @@ public class ClassifierRunner {
         return eval;
     }
 
-    public Evaluation evaluate(Options options) throws Exception {
-        return ClassifierRunner.evaluate(this.classifier, this.instancesPair, options);
+    public AbstractClassifier buildClassifier(Options options) throws Exception {
+        return this.buildClassifier(this.classifier, this.instancesPair, options);
     }
 
-    public static AbstractClassifier buildClassifier(AbstractClassifier classifier, InstancesPair instancesPair, Options options) throws Exception {
+    private AbstractClassifier buildClassifier(AbstractClassifier classifier, InstancesPair instancesPair, Options options) throws Exception {
         classifier.setOptions(options.getOptions());
         classifier.buildClassifier(instancesPair.getTrainingInstances());
         return classifier;
     }
 
-    public AbstractClassifier buildClassifier(Options options) throws Exception {
-        return ClassifierRunner.buildClassifier(this.classifier, this.instancesPair, options);
-    }
-
-    public static Evaluation getBestEvaluation(AbstractClassifier classifier, InstancesPair instancesPair, Options[] optionsList) throws Exception {
-        Options bestOptions = ClassifierRunner.tune(classifier, instancesPair, optionsList);
-        return ClassifierRunner.evaluate(classifier, instancesPair, bestOptions);
-    }
-
     public Evaluation getBestEvaluation() throws Exception {
-        return ClassifierRunner.getBestEvaluation(this.classifier, this.instancesPair, this.optionsList);
+        return this.getBestEvaluation(this.classifier, this.instancesPair, this.optionsList);
+    }
+
+    private Evaluation getBestEvaluation(AbstractClassifier classifier, InstancesPair instancesPair, Options[] optionsList) throws Exception {
+        this.bestOptions = this.tune(classifier, instancesPair, optionsList);
+        return this.evaluate(classifier, instancesPair, this.bestOptions);
+    }
+
+    public Options tune() throws Exception {
+        return this.tune(this.classifier, this.instancesPair, this.optionsList);
+    }
+
+    private Options tune(AbstractClassifier classifier, InstancesPair instancesPair, Options[] optionsList) throws Exception {
+        double mostPctCorrect = 0.0;
+
+        for (Options options : optionsList) {
+            Evaluation eval = this.evaluate(classifier, instancesPair, options);
+            double pctCorrect = eval.pctCorrect();
+            if (pctCorrect > mostPctCorrect) {
+                mostPctCorrect = pctCorrect;
+                this.bestOptions = options;
+            }
+        }
+        
+        this.hasBeenTuned = true;
+
+        return this.bestOptions;
+    }
+
+    public Options getBestOptions() throws Exception {
+        if (!this.hasBeenTuned)
+            throw new Exception("Cannot get best options - classifier has not been tuned");
+        return this.bestOptions;
     }
 
     public String toString() {
