@@ -3,6 +3,7 @@ package ml;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import java.util.ArrayList;
@@ -23,10 +24,12 @@ public class App {
     private String resultsDir;
     private int numTuningTrials;
     private int fileCounter;
+    private Verboser logger;
 
-    public App(String arffDir, String resultsDir, int numTuningTrials) {
+    public App(String arffDir, String resultsDir, String logFile, int numTuningTrials) throws FileNotFoundException {
         this.arffDir = arffDir;
         this.resultsDir = resultsDir;
+        this.logger = new Verboser(logFile);
         this.numTuningTrials = numTuningTrials;
         this.fileCounter = 0;
     }
@@ -54,10 +57,16 @@ public class App {
         for (NamedClassifier namedClassifier : classifiers) {
             AbstractClassifier classifier = namedClassifier.getClassifier();
 
-            OptionsBuilder builder = this.getOptionsBuilder(namedClassifier.getName(), this.numTuningTrials); //TODO give user control over number of tuning sets
+            OptionsBuilder builder = this.getOptionsBuilder(namedClassifier.getName(), this.numTuningTrials);
             Options[] generatedOptions = builder.getGeneratedOptions();
-            System.out.println(builder.toString());
             ClassifierRunner runner = new ClassifierRunner(classifier, instancesPair, generatedOptions, classifier.toString());
+
+            logger.println("CLASSIFIER: " + namedClassifier.getName());
+            String[] defaultOptions = classifier.getOptions();
+            logger.println("==== Default Options ====");
+            for (String option : defaultOptions)
+                logger.print(option + ",");
+            logger.println("\n==== Printing Options Builder ====\n" + builder.toString());
 
             Timer t = new Timer();
             t.start();
@@ -121,13 +130,17 @@ public class App {
 
     public static void main(String[] args) {
         try {
-            System.out.println("Reading command line args for <arff directory> <results directory> <number of tuning trials>");
-            if (args.length != 2) {
-                args = new String[] {"./arffs/", "./results/", "10"};
-                System.out.println("NOTICE: Defaulting to " + args[0] + ", " + args[1] + " and " + args[2] + " for CLI args.");
+            System.out.println("Reading command line args for <arff directory> <results directory> <log file> <number of tuning trials>");
+            if (args.length != 4) {
+                args = new String[] {"./arffs/", "./results/", "./maven/ml/logs/log" + System.currentTimeMillis() + ".txt", "1"};
+                System.out.println("NOTICE: Defaulting to " + args[0] + ", " + args[1] + ", " + args[2] + " and " + args[3] + " for CLI args.");
             }
-            App app = new App(args[0], args[1], Integer.valueOf(args[2]));
+            System.out.println("All other logging will appear in " + args[2]);
+            App app = new App(args[0], args[1], args[2], Integer.valueOf(args[3]));
             app.run();
+        } catch (FileNotFoundException fnfe) {
+            System.out.println("FileNotFoundException caught: " + fnfe);
+            fnfe.printStackTrace();
         } catch (IOException ioe) {
             System.out.println("IOException caught: " + ioe);
             ioe.printStackTrace();

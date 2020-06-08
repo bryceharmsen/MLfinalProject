@@ -20,12 +20,12 @@ public class RandForestOptionsBuilder extends OptionsBuilder {
         ArrayList<Options> generatedOptions = new ArrayList<>();
         String[] options = this.classifier.getOptions();
 
-        Iterator<Integer> numTrees = (new Random()).ints(10, 300).iterator();
+        Iterator<Integer> numTrees = (new Random()).ints(10, 100).iterator();
         Iterator<Integer> numFeatures = (new Random()).ints(1, 10).iterator();
         
         while(numGeneratedOptions-- > 0) {
-            options[1] = Integer.toString(numTrees.next());
-            options[3] = Integer.toString(numFeatures.next());
+            options[3] = Integer.toString(numTrees.next());
+            //options[3] = Integer.toString(numFeatures.next());
 
             generatedOptions.add(new Options(options));
         }
