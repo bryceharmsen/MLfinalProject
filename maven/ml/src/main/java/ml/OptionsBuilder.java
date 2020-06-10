@@ -11,7 +11,7 @@ public abstract class OptionsBuilder {
     protected ArrayList<Options> generatedOptions;
     protected int numGeneratedOptions;
 
-    public OptionsBuilder(AbstractClassifier classifier, int numGeneratedOptions) {
+    public OptionsBuilder(AbstractClassifier classifier, int numGeneratedOptions) throws Exception {
         this.classifier = classifier;
         this.defaultOptions = new Options(classifier.getOptions());
         this.numGeneratedOptions = numGeneratedOptions;
@@ -29,7 +29,7 @@ public abstract class OptionsBuilder {
         return this.defaultOptions;
     }
 
-    protected abstract ArrayList<Options> generateOptions(int numGeneratedOptions);
+    protected abstract ArrayList<Options> generateOptions(int numGeneratedOptions) throws Exception;
 
     public Options[] getGeneratedOptions() {
         return this.generatedOptions.toArray(new Options[0]);

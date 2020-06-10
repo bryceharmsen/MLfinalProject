@@ -1,0 +1,216 @@
+CLASSIFIER: MLP
+==== Default Options ====
+-L,0.3,-M,0.2,-N,500,-V,0,-S,0,-E,20,-H,a,
+==== Printing Options Builder ====
+[-L,0.3363678124628706,-M,0.2,-N,429,-V,0,-S,0,-E,20,-H,1, 9]
+
+CLASSIFIER: SVM
+==== Default Options ====
+-C,1.0,-L,0.001,-P,1.0E-12,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4,
+==== Printing Options Builder ====
+[-C,1.7536788281395985,-L,0.2952157585537315,-P,3.9002462748099713,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4]
+
+CLASSIFIER: RBFNetwork
+==== Default Options ====
+-B,2,-S,1,-R,1.0E-8,-M,-1,-W,0.1,
+==== Printing Options Builder ====
+[-B,10,-S,1,-R,0.3535082217943266,-M,-1,-W,1.8849552025061702]
+
+CLASSIFIER: RandomForest
+==== Default Options ====
+-P,100,-I,100,-num-slots,1,-K,0,-M,1.0,-V,0.001,-S,1,
+==== Printing Options Builder ====
+[-P,35,-I,100,-num-slots,1,-K,2,-M,1.0,-V,0.001,-S,1]
+
+CLASSIFIER: MLP
+==== Default Options ====
+-L,0.3363678124628706,-M,0.2,-N,429,-V,0,-S,0,-E,20,-H,1, 9,
+==== Printing Options Builder ====
+[-L,0.3318854380412378,-M,0.2,-N,307,-V,0,-S,0,-E,20,-H,15]
+
+CLASSIFIER: SVM
+==== Default Options ====
+-C,1.7536788281395985,-L,0.2952157585537315,-P,3.9002462748099713,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4,
+==== Printing Options Builder ====
+[-C,2.1674014003670843,-L,0.23417156981307563,-P,8.253916225125181,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4]
+
+CLASSIFIER: RBFNetwork
+==== Default Options ====
+-B,10,-S,1,-R,0.3535082217943266,-M,-1,-W,1.8849552025061702,
+==== Printing Options Builder ====
+[-B,10,-S,1,-R,0.17982819699987415,-M,-1,-W,8.155295874407047]
+
+CLASSIFIER: RandomForest
+==== Default Options ====
+-P,35,-I,100,-num-slots,1,-K,2,-M,1.0,-V,0.001,-S,1,
+==== Printing Options Builder ====
+[-P,77,-I,100,-num-slots,1,-K,8,-M,1.0,-V,0.001,-S,1]
+
+CLASSIFIER: MLP
+==== Default Options ====
+-L,0.3318854380412378,-M,0.2,-N,307,-V,0,-S,0,-E,20,-H,15,
+==== Printing Options Builder ====
+[-L,0.19119319440741492,-M,0.2,-N,183,-V,0,-S,0,-E,20,-H,5]
+
+CLASSIFIER: SVM
+==== Default Options ====
+-C,2.1674014003670843,-L,0.23417156981307563,-P,8.253916225125181,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4,
+==== Printing Options Builder ====
+[-C,2.43552585202389,-L,0.2873536974914588,-P,1.848107805353479,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4]
+
+CLASSIFIER: RBFNetwork
+==== Default Options ====
+-B,10,-S,1,-R,0.17982819699987415,-M,-1,-W,8.155295874407047,
+==== Printing Options Builder ====
+[-B,10,-S,1,-R,0.26739585247778025,-M,-1,-W,0.8555429015962391]
+
+CLASSIFIER: RandomForest
+==== Default Options ====
+-P,77,-I,100,-num-slots,1,-K,8,-M,1.0,-V,0.001,-S,1,
+==== Printing Options Builder ====
+[-P,49,-I,100,-num-slots,1,-K,5,-M,1.0,-V,0.001,-S,1]
+
+CLASSIFIER: MLP
+==== Default Options ====
+-L,0.19119319440741492,-M,0.2,-N,183,-V,0,-S,0,-E,20,-H,5,
+==== Printing Options Builder ====
+[-L,0.38612061915040785,-M,0.2,-N,452,-V,0,-S,0,-E,20,-H,14, 7]
+
+CLASSIFIER: SVM
+==== Default Options ====
+-C,2.43552585202389,-L,0.2873536974914588,-P,1.848107805353479,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4,
+==== Printing Options Builder ====
+[-C,9.238859939721689,-L,0.30564795541197537,-P,6.075894670102472,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4]
+
+CLASSIFIER: RBFNetwork
+==== Default Options ====
+-B,10,-S,1,-R,0.26739585247778025,-M,-1,-W,0.8555429015962391,
+==== Printing Options Builder ====
+[-B,10,-S,1,-R,0.31112648783721675,-M,-1,-W,2.2358103247459225]
+
+CLASSIFIER: RandomForest
+==== Default Options ====
+-P,49,-I,100,-num-slots,1,-K,5,-M,1.0,-V,0.001,-S,1,
+==== Printing Options Builder ====
+[-P,96,-I,100,-num-slots,1,-K,6,-M,1.0,-V,0.001,-S,1]
+
+CLASSIFIER: MLP
+==== Default Options ====
+-L,0.38612061915040785,-M,0.2,-N,452,-V,0,-S,0,-E,20,-H,14, 7,
+==== Printing Options Builder ====
+[-L,0.3313670632365976,-M,0.2,-N,150,-V,0,-S,0,-E,20,-H,19]
+
+CLASSIFIER: SVM
+==== Default Options ====
+-C,9.238859939721689,-L,0.30564795541197537,-P,6.075894670102472,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4,
+==== Printing Options Builder ====
+[-C,2.9542477199994535,-L,0.35767800324070964,-P,1.1990598597318989,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4]
+
+CLASSIFIER: RBFNetwork
+==== Default Options ====
+-B,10,-S,1,-R,0.31112648783721675,-M,-1,-W,2.2358103247459225,
+==== Printing Options Builder ====
+[-B,10,-S,1,-R,0.15667260262248667,-M,-1,-W,4.17812108214704]
+
+CLASSIFIER: RandomForest
+==== Default Options ====
+-P,96,-I,100,-num-slots,1,-K,6,-M,1.0,-V,0.001,-S,1,
+==== Printing Options Builder ====
+[-P,23,-I,100,-num-slots,1,-K,5,-M,1.0,-V,0.001,-S,1]
+
+CLASSIFIER: MLP
+==== Default Options ====
+-L,0.3313670632365976,-M,0.2,-N,150,-V,0,-S,0,-E,20,-H,19,
+==== Printing Options Builder ====
+[-L,0.2495810668551815,-M,0.2,-N,435,-V,0,-S,0,-E,20,-H,13, 2]
+
+CLASSIFIER: SVM
+==== Default Options ====
+-C,2.9542477199994535,-L,0.35767800324070964,-P,1.1990598597318989,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4,
+==== Printing Options Builder ====
+[-C,6.913246921771274,-L,0.2663840040161557,-P,8.48161297317018,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4]
+
+CLASSIFIER: RBFNetwork
+==== Default Options ====
+-B,10,-S,1,-R,0.15667260262248667,-M,-1,-W,4.17812108214704,
+==== Printing Options Builder ====
+[-B,10,-S,1,-R,0.33066578433843596,-M,-1,-W,8.35356796443959]
+
+CLASSIFIER: RandomForest
+==== Default Options ====
+-P,23,-I,100,-num-slots,1,-K,5,-M,1.0,-V,0.001,-S,1,
+==== Printing Options Builder ====
+[-P,21,-I,100,-num-slots,1,-K,2,-M,1.0,-V,0.001,-S,1]
+
+CLASSIFIER: MLP
+==== Default Options ====
+-L,0.2495810668551815,-M,0.2,-N,435,-V,0,-S,0,-E,20,-H,13, 2,
+==== Printing Options Builder ====
+[-L,0.2621029221057267,-M,0.2,-N,265,-V,0,-S,0,-E,20,-H,4]
+
+CLASSIFIER: SVM
+==== Default Options ====
+-C,6.913246921771274,-L,0.2663840040161557,-P,8.48161297317018,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4,
+==== Printing Options Builder ====
+[-C,6.172985982010008,-L,0.37109682886062856,-P,2.3102273853331075,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4]
+
+CLASSIFIER: RBFNetwork
+==== Default Options ====
+-B,10,-S,1,-R,0.33066578433843596,-M,-1,-W,8.35356796443959,
+==== Printing Options Builder ====
+[-B,10,-S,1,-R,0.26441450887162904,-M,-1,-W,5.3316554139158]
+
+CLASSIFIER: RandomForest
+==== Default Options ====
+-P,21,-I,100,-num-slots,1,-K,2,-M,1.0,-V,0.001,-S,1,
+==== Printing Options Builder ====
+[-P,55,-I,100,-num-slots,1,-K,7,-M,1.0,-V,0.001,-S,1]
+
+CLASSIFIER: MLP
+==== Default Options ====
+-L,0.2621029221057267,-M,0.2,-N,265,-V,0,-S,0,-E,20,-H,4,
+==== Printing Options Builder ====
+[-L,0.1629830440795748,-M,0.2,-N,262,-V,0,-S,0,-E,20,-H,15]
+
+CLASSIFIER: SVM
+==== Default Options ====
+-C,6.172985982010008,-L,0.37109682886062856,-P,2.3102273853331075,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4,
+==== Printing Options Builder ====
+[-C,8.450908582217398,-L,0.22173674491977644,-P,8.797834513750447,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4]
+
+CLASSIFIER: RBFNetwork
+==== Default Options ====
+-B,10,-S,1,-R,0.26441450887162904,-M,-1,-W,5.3316554139158,
+==== Printing Options Builder ====
+[-B,10,-S,1,-R,0.26957199951973343,-M,-1,-W,0.0324871933084792]
+
+CLASSIFIER: RandomForest
+==== Default Options ====
+-P,55,-I,100,-num-slots,1,-K,7,-M,1.0,-V,0.001,-S,1,
+==== Printing Options Builder ====
+[-P,31,-I,100,-num-slots,1,-K,3,-M,1.0,-V,0.001,-S,1]
+
+CLASSIFIER: MLP
+==== Default Options ====
+-L,0.1629830440795748,-M,0.2,-N,262,-V,0,-S,0,-E,20,-H,15,
+==== Printing Options Builder ====
+[-L,0.19243414087709018,-M,0.2,-N,229,-V,0,-S,0,-E,20,-H,12, 8]
+
+CLASSIFIER: SVM
+==== Default Options ====
+-C,8.450908582217398,-L,0.22173674491977644,-P,8.797834513750447,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4,
+==== Printing Options Builder ====
+[-C,8.247702344854167,-L,0.16577100040163872,-P,8.721630845773541,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4]
+
+CLASSIFIER: RBFNetwork
+==== Default Options ====
+-B,10,-S,1,-R,0.26957199951973343,-M,-1,-W,0.0324871933084792,
+==== Printing Options Builder ====
+[-B,10,-S,1,-R,0.20078473933349494,-M,-1,-W,8.126468612530362]
+
+CLASSIFIER: RandomForest
+==== Default Options ====
+-P,31,-I,100,-num-slots,1,-K,3,-M,1.0,-V,0.001,-S,1,
+==== Printing Options Builder ====
+[-P,92,-I,100,-num-slots,1,-K,3,-M,1.0,-V,0.001,-S,1]
+

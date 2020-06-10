@@ -8,7 +8,7 @@ import weka.classifiers.functions.RBFNetwork;
 
 public class RbfOptionsBuilder extends OptionsBuilder {
     
-    public RbfOptionsBuilder(int numGeneratedOptions) {
+    public RbfOptionsBuilder(int numGeneratedOptions) throws Exception {
         super(new RBFNetwork(), numGeneratedOptions);
     }
 
@@ -16,20 +16,25 @@ public class RbfOptionsBuilder extends OptionsBuilder {
         super(copy);
     }
 
-    protected ArrayList<Options> generateOptions(int numGeneratedOptions) {
+    protected ArrayList<Options> generateOptions(int numGeneratedOptions) throws Exception {
         ArrayList<Options> generatedOptions = new ArrayList<>();
-        String[] options = this.classifier.getOptions();
+        RBFNetwork rbf = (RBFNetwork) this.classifier;
+        rbf.setNumClusters(10);
+        String[] defaultOptions = this.classifier.getOptions();
 
         //Iterator<Integer> numClusters = (new Random()).ints(50, 501).iterator();
         Iterator<Double> ridge = (new Random()).doubles(0.1, 0.4).iterator();
         Iterator<Double> minStdDev = (new Random()).doubles(0.01, 10).iterator();
         
         while(numGeneratedOptions-- > 0) {
-            options[1] = "10";//Integer.toString(numClusters.next());
-            options[5] = Double.toString(ridge.next());
-            options[9] = Double.toString(minStdDev.next());
+            rbf.setOptions(defaultOptions);
+            rbf.setMinStdDev(minStdDev.next());
+            rbf.setRidge(ridge.next());
+            //options[1] = "10";//Integer.toString(numClusters.next());
+            //options[5] = Double.toString(ridge.next());
+            //options[9] = Double.toString(minStdDev.next());
 
-            generatedOptions.add(new Options(options));
+            generatedOptions.add(new Options(rbf.getOptions()));
         }
 
         return generatedOptions;

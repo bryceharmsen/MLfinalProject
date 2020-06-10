@@ -1,0 +1,16 @@
+====  TIME  ====
+2.943366142 seconds
+
+====  OPTIONS  ====
+-C,4.630828137967171,-L,0.12250474672405338,-P,0.06245062693056539,-N,0,-V,-1,-W,1,-K,weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007,-calibrator,weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+
+====  SUMMARY  ====
+
+Correctly Classified Instances         116               96.6667 %
+Incorrectly Classified Instances         4                3.3333 %
+Kappa statistic                          0.963 
+Mean absolute error                      0.1601
+Root mean squared error                  0.2723
+Relative absolute error                 88.9712 %
+Root relative squared error             90.7586 %
+Total Number of Instances              120     

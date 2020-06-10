@@ -1,0 +1,16 @@
+====  TIME  ====
+2.029511122 seconds
+
+====  OPTIONS  ====
+-L,0.19119319440741492,-M,0.2,-N,183,-V,0,-S,0,-E,20,-H,5
+
+====  SUMMARY  ====
+
+Correctly Classified Instances         785               98.125  %
+Incorrectly Classified Instances        15                1.875  %
+Kappa statistic                          0.9792
+Mean absolute error                      0.0139
+Root mean squared error                  0.0565
+Relative absolute error                  7.7016 %
+Root relative squared error             18.8463 %
+Total Number of Instances              800     

@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 import weka.core.Instances;
@@ -23,15 +23,13 @@ public class App {
     private String arffDir;
     private String resultsDir;
     private int numTuningTrials;
-    private int fileCounter;
-    private Verboser logger;
+    private PrintStream logger;
 
     public App(String arffDir, String resultsDir, String logFile, int numTuningTrials) throws FileNotFoundException {
         this.arffDir = arffDir;
         this.resultsDir = resultsDir;
-        this.logger = new Verboser(logFile);
+        this.logger = new PrintStream(logFile);
         this.numTuningTrials = numTuningTrials;
-        this.fileCounter = 0;
     }
 
 
@@ -47,9 +45,8 @@ public class App {
         for (FilePair pair : filePairs) {
             Instances trainingInstances = this.getInstancesFrom(pair.getTrainingFile()),
                         testingInstances = this.getInstancesFrom(pair.getTestingFile());
-            InstancesPair instancesPair = new InstancesPair(trainingInstances, testingInstances);
+            InstancesPair instancesPair = new InstancesPair(trainingInstances, testingInstances, pair.getDirName());
             this.runForInstancesPair(classifiers, instancesPair);
-            this.fileCounter++;
         }
     }
 
@@ -73,7 +70,7 @@ public class App {
             Evaluation eval = runner.getBestEvaluation();
             t.end();
 
-            this.writeEvalToFile(eval, runner.getBestOptions(), t, namedClassifier.getName() + Integer.toString(this.fileCounter) + ".txt");
+            this.writeEvalToFile(eval, runner.getBestOptions(), t, namedClassifier.getName() + instancesPair.getDirName() + ".txt");
         }
     }
 
@@ -107,7 +104,7 @@ public class App {
         
         for (File subDir : dir.listFiles()) {
             if (subDir.isDirectory())
-                filePairs.add(new FilePair(subDir.listFiles()));
+                filePairs.add(new FilePair(subDir.listFiles(), subDir.getName()));
         }
 
         FilePair[] pairs = new FilePair[filePairs.size()];
@@ -132,7 +129,12 @@ public class App {
         try {
             System.out.println("Reading command line args for <arff directory> <results directory> <log file> <number of tuning trials>");
             if (args.length != 4) {
-                args = new String[] {"./arffs/", "./results/", "./maven/ml/logs/log" + System.currentTimeMillis() + ".txt", "1"};
+                args = new String[] {
+                    "./arffs/",
+                    "./results/",
+                    "./maven/ml/logs/log" + System.currentTimeMillis() + ".txt",
+                    "30"
+                };
                 System.out.println("NOTICE: Defaulting to " + args[0] + ", " + args[1] + ", " + args[2] + " and " + args[3] + " for CLI args.");
             }
             System.out.println("All other logging will appear in " + args[2]);

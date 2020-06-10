@@ -8,26 +8,30 @@ import weka.classifiers.trees.RandomForest;
 
 public class RandForestOptionsBuilder extends OptionsBuilder {
     
-    public RandForestOptionsBuilder(int numGeneratedOptions) {
+    public RandForestOptionsBuilder(int numGeneratedOptions) throws Exception {
         super(new RandomForest(), numGeneratedOptions);
     }
 
-    public RandForestOptionsBuilder(RandForestOptionsBuilder copy) {
+    public RandForestOptionsBuilder(RandForestOptionsBuilder copy) throws Exception {
         super(copy);
     }
 
-    protected ArrayList<Options> generateOptions(int numGeneratedOptions) {
+    protected ArrayList<Options> generateOptions(int numGeneratedOptions) throws Exception {
         ArrayList<Options> generatedOptions = new ArrayList<>();
-        String[] options = this.classifier.getOptions();
+        RandomForest rf = (RandomForest) this.classifier;
+        String[] defaultOptions = this.classifier.getOptions();
 
-        Iterator<Integer> numTrees = (new Random()).ints(10, 100).iterator();
         Iterator<Integer> numFeatures = (new Random()).ints(1, 10).iterator();
+        Iterator<Integer> bagSizePercent = (new Random()).ints(5, 100).iterator();
         
         while(numGeneratedOptions-- > 0) {
-            options[3] = Integer.toString(numTrees.next());
+            rf.setOptions(defaultOptions);
+            rf.setNumFeatures(numFeatures.next());
+            rf.setBagSizePercent(bagSizePercent.next());
+            //options[3] = Integer.toString(numTrees.next());
             //options[3] = Integer.toString(numFeatures.next());
 
-            generatedOptions.add(new Options(options));
+            generatedOptions.add(new Options(rf.getOptions()));
         }
 
         return generatedOptions;

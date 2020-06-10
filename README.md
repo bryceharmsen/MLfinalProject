@@ -3,8 +3,9 @@ Individual Final Project for Machine Learning 457 at CWU.
 
 ## Java
 
-To run the Maven Java project, change directory to the parent directory (MLfinalProject), and run:  
-```java -Dfile.encoding=UTF-8 @/tmp/cp_vngd4z7nsodb9j8f4wl3xwie.argfile ml.App ./arffs/ ./results/```
+To run the Maven Java project, open the maven directory in a Java-compliant IDE and run through the IDE. The author ran this code using VS Code and the Maven for Java extension. If run from the command line, the required CLI args are
+```<arff directory path> <results directory path> <log path and filename to create> <number of tuning trials>```
+These paths can be relative from the user's current directory. The number of tuning trials defines the number of iterations to perform random search for hyperparameter optimization for each configuration of each ML algorithm.
 
 ## Python
 
